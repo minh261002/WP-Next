@@ -40,7 +40,7 @@ const Header = () => {
                 <div className='w-full max-w-[1440px] mx-auto'>
                     <div className="grid grid-cols-5 items-center">
                         <div className='col-span-2 md:col-span-1 flex items-center gap-2'>
-                            <Image src={"/logo.svg"} alt='logo' width={150} height={100} />
+                            <Image src={"/logo.svg"} alt='logo' width={150} height={100} className='w-2/3 md:w-full' />
                         </div>
 
                         <div className='col-span-3 items-center gap-2 relative hidden md:flex'>
