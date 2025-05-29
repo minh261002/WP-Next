@@ -1,6 +1,7 @@
+"use client"
+
 import {
     AlertDialog,
-    AlertDialogAction,
     AlertDialogCancel,
     AlertDialogContent,
     AlertDialogDescription,
@@ -10,6 +11,14 @@ import {
     AlertDialogTrigger,
 } from "@/components/ui/alert-dialog"
 import Image from "next/image"
+import {
+    Tabs,
+    TabsContent,
+    TabsList,
+    TabsTrigger,
+} from "@/components/ui/tabs"
+import AuthLogin from "./AuthLogin"
+import AuthRegister from "./AuthRegister"
 
 const AuthAlert = () => {
     return (
@@ -22,18 +31,34 @@ const AuthAlert = () => {
             </AlertDialogTrigger>
             <AlertDialogContent>
                 <AlertDialogHeader>
-                    <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
-                    <AlertDialogDescription>
-                        This action cannot be undone. This will permanently delete your
-                        account and remove your data from our servers.
+                    <AlertDialogTitle>
+                        <span className="text-2xl font-bold">Moon Studio xin chào</span>
+                    </AlertDialogTitle>
+                    <AlertDialogDescription className="text-sm">
+                        Vui lòng đăng nhập hoặc đăng ký để tiếp tục sử dụng đầy đủ dịch vụ của chúng tôi.
                     </AlertDialogDescription>
                 </AlertDialogHeader>
+                <Tabs defaultValue="login">
+                    <TabsList className="grid w-full grid-cols-2">
+                        <TabsTrigger value="login" className="cursor-pointer data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">
+                            Đăng nhập
+                        </TabsTrigger>
+                        <TabsTrigger value="register" className="cursor-pointer data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">
+                            Đăng ký
+                        </TabsTrigger>
+                    </TabsList>
+                    <TabsContent value="login">
+                        <AuthLogin />
+                    </TabsContent>
+                    <TabsContent value="register">
+                        <AuthRegister />
+                    </TabsContent>
+                </Tabs>
                 <AlertDialogFooter>
-                    <AlertDialogCancel>Cancel</AlertDialogCancel>
-                    <AlertDialogAction>Continue</AlertDialogAction>
+                    <AlertDialogCancel className="cursor-pointer">Huỷ</AlertDialogCancel>
                 </AlertDialogFooter>
             </AlertDialogContent>
-        </AlertDialog>
+        </AlertDialog >
     )
 }
 

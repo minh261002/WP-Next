@@ -26,7 +26,7 @@ export type LoginResponse = {
 };
 
 export type Login = {
-    email: string;
+    username: string;
     password: string;
 };
 
@@ -34,6 +34,7 @@ export type Register = {
     email: string;
     password: string;
     name: string;
+    username: string;
 };
 
 export type ForgotPassword = {
