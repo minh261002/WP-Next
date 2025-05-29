@@ -5,6 +5,7 @@ import { Input } from '../ui/input'
 import { Button } from '../ui/button'
 import { SearchIcon } from 'lucide-react'
 import { Badge } from '../ui/badge'
+import MobileMenu from './MobileMenu'
 
 const Header = () => {
     return (
@@ -30,26 +31,26 @@ const Header = () => {
                         </div>
 
                         <div className='flex items-center gap-2 justify-end'>
-                            <AuthAlert />
+                            <AuthAlert title='Tài khoản' />
                         </div>
                     </div>
                 </div>
             </div>
-            <div className='w-full bg-white border-b border-gray-200 shadow-sm py-3'>
+            <div className='w-full bg-white border-b border-gray-200 shadow-sm py-3 px-4 md:px-0'>
                 <div className='w-full max-w-[1440px] mx-auto'>
                     <div className="grid grid-cols-5 items-center">
-                        <div className='col-span-1 flex items-center gap-2'>
+                        <div className='col-span-2 md:col-span-1 flex items-center gap-2'>
                             <Image src={"/logo.svg"} alt='logo' width={150} height={100} />
                         </div>
 
-                        <div className='col-span-3 flex items-center gap-2 relative'>
+                        <div className='col-span-3 items-center gap-2 relative hidden md:flex'>
                             <Input className='w-full h-11' placeholder='Tìm kiếm sản phẩm' />
                             <Button variant={"default"} className='absolute right-0 top-0 h-full w-10'>
                                 <SearchIcon className='w-4 h-4' />
                             </Button>
                         </div>
 
-                        <div className="col-span-1 flex items-center justify-end gap-6">
+                        <div className="col-span-1 items-center justify-end gap-6 hidden md:flex">
                             <div className='flex flex-col items-center gap-1 relative'>
                                 <Image src={"/cart-top.png"} alt='cart' width={35} height={20} />
                                 <span className='text-xs font-medium'>Giỏ hàng</span>
@@ -65,6 +66,10 @@ const Header = () => {
                                     <span className='text-xs font-medium'>1</span>
                                 </Badge>
                             </div>
+                        </div>
+
+                        <div className='col-span-3 flex items-center justify-end gap-6 md:hidden'>
+                            <MobileMenu />
                         </div>
                     </div>
                 </div>

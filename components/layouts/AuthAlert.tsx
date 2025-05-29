@@ -20,13 +20,21 @@ import {
 import AuthLogin from "./AuthLogin"
 import AuthRegister from "./AuthRegister"
 
-const AuthAlert = () => {
+const AuthAlert = (
+    {
+        title = "Tài khoản"
+    }: {
+        title: string
+    }
+) => {
     return (
         <AlertDialog>
             <AlertDialogTrigger>
                 <div className="flex items-center gap-2 cursor-pointer">
                     <Image src={"/customer-login.png"} alt='logo' width={100} height={100} className='w-5' />
-                    <span className='text-sm font-medium'>Tài khoản</span>
+                    <span className='text-sm font-medium'>
+                        {title}
+                    </span>
                 </div>
             </AlertDialogTrigger>
             <AlertDialogContent>
