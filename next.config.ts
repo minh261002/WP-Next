@@ -5,8 +5,8 @@ const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: 'http',
-        hostname: 'app-api.local',
+        protocol: 'https',
+        hostname: 'api.nextarea.vn',
         pathname: '/wp-content/uploads/**',
       },
     ],
