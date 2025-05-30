@@ -11,6 +11,7 @@ export function useFetchData<T>(
     return useQuery<T>({
         queryKey: Array.isArray(key) ? key : [key],
         queryFn: fetcher,
+        staleTime: 1000 * 60 * 5,
         ...options,
     });
 }

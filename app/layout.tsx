@@ -23,7 +23,7 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body>
+      <body className="bg-[#f6f7fe]">
         <ReactQueryProvider>{children}</ReactQueryProvider>
         <Toaster position="top-right" />
       </body>
