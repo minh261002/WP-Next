@@ -24,7 +24,7 @@ const Brand = () => {
             </CardHeader>
 
             <CardContent>
-                <div className="grid grid-cols-5">
+                <div className="grid grid-cols-2 md:grid-cols-5">
                     {data?.map((brand) => (
                         <div key={brand.id} className="flex flex-col items-center justify-center border">
                             <Link href={`/thuong-hieu/${brand.slug}`} className="w-full h-24">
