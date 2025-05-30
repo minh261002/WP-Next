@@ -19,6 +19,7 @@ import {
 } from "@/components/ui/tabs"
 import AuthLogin from "./AuthLogin"
 import AuthRegister from "./AuthRegister"
+import { appImages } from "@/constants/appImages"
 
 const AuthAlert = (
     {
@@ -31,7 +32,7 @@ const AuthAlert = (
         <AlertDialog>
             <AlertDialogTrigger>
                 <div className="flex items-center gap-2 cursor-pointer">
-                    <Image src={"/customer-login.png"} alt='logo' width={100} height={100} className='w-5' />
+                    <Image src={appImages.customerLogin} alt='logo' width={100} height={100} className='w-5' />
                     <span className='text-sm font-medium'>
                         {title}
                     </span>

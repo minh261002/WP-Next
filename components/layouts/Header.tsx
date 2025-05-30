@@ -6,6 +6,7 @@ import { Button } from '../ui/button'
 import { SearchIcon } from 'lucide-react'
 import { Badge } from '../ui/badge'
 import MobileMenu from './MobileMenu'
+import { appImages } from '@/constants/appImages'
 
 const Header = () => {
     return (
@@ -16,17 +17,17 @@ const Header = () => {
                         <div className='flex items-center gap-2'>
                             <span className='text-sm font-medium'>Mua hàng và CSKH:</span>
                             <span className='text-sm font-bold text-pink-500'>1800 6099</span>
-                            <Image src={"/free-call.png"} alt='icon-phone' width={100} height={100} className='w-10' />
+                            <Image src={appImages.freeCall} alt='icon-phone' width={100} height={100} className='w-10' />
                         </div>
 
                         <div className='flex items-center gap-2'>
-                            <Image src={"/store.png"} alt='icon-phone' width={100} height={100} className='w-5' />
+                            <Image src={appImages.store} alt='icon-phone' width={100} height={100} className='w-5' />
                             <span className='text-sm font-medium'>Tìm siêu thị</span>
                             <span className='text-sm font-bold text-pink-500'>(19)</span>
                         </div>
 
                         <div className='flex items-center gap-2'>
-                            <Image src={"/sieu-toc.png"} alt='icon-phone' width={100} height={100} className='w-5' />
+                            <Image src={appImages.sieuToc} alt='icon-phone' width={100} height={100} className='w-5' />
                             <span className='text-sm font-medium'>Nhập địa chỉ để mua hàng giao <strong>Siêu Tốc 1h</strong></span>
                         </div>
 
@@ -40,7 +41,7 @@ const Header = () => {
                 <div className='w-full max-w-[1440px] mx-auto'>
                     <div className="grid grid-cols-5 items-center">
                         <div className='col-span-2 md:col-span-1 flex items-center gap-2'>
-                            <Image src={"/logo.svg"} alt='logo' width={150} height={100} className='w-2/3 md:w-1/2' />
+                            <Image src={appImages.logo} alt='logo' width={150} height={100} className='w-2/3 md:w-1/2' />
                         </div>
 
                         <div className='col-span-3 items-center gap-2 relative hidden md:flex'>
@@ -52,7 +53,7 @@ const Header = () => {
 
                         <div className="col-span-1 items-center justify-end gap-6 hidden md:flex">
                             <div className='flex flex-col items-center gap-1 relative'>
-                                <Image src={"/cart-top.png"} alt='cart' width={35} height={20} />
+                                <Image src={appImages.cartTop} alt='cart' width={35} height={20} />
                                 <span className='text-xs font-medium'>Giỏ hàng</span>
                                 <Badge variant={"default"} className='absolute -top-2 -right-2 rounded-full'>
                                     <span className='text-xs font-medium'>1</span>
@@ -60,7 +61,7 @@ const Header = () => {
                             </div>
 
                             <div className='flex flex-col items-center gap-1 relative'>
-                                <Image src={"/notify-top.png"} alt='cart' width={35} height={20} />
+                                <Image src={appImages.notifyTop} alt='cart' width={35} height={20} />
                                 <span className='text-xs font-medium'>Thông báo</span>
                                 <Badge variant={"default"} className='absolute -top-2 -right-0 rounded-full'>
                                     <span className='text-xs font-medium'>1</span>

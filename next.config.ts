@@ -7,7 +7,6 @@ const nextConfig: NextConfig = {
       {
         protocol: 'https',
         hostname: 'api.nextarea.vn',
-        pathname: '/wp-content/uploads/**',
       },
     ],
   },

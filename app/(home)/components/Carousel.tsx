@@ -10,14 +10,14 @@ import Image from "next/image";
 
 const HomeCarousel = () => {
     const images = [
-        'http://app-api.local/wp-content/uploads/2025/05/banner-home-1.png',
-        'http://app-api.local/wp-content/uploads/2025/05/banner-home-2.png',
-        'http://app-api.local/wp-content/uploads/2025/05/banner-home-3.png',
-        'http://app-api.local/wp-content/uploads/2025/05/banner-home-4.png',
-        'http://app-api.local/wp-content/uploads/2025/05/banner-home-5.png',
+        'https://api.nextarea.vn/wp-content/uploads/2025/05/banner-home-1.png',
+        'https://api.nextarea.vn/wp-content/uploads/2025/05/banner-home-2.png',
+        'https://api.nextarea.vn/wp-content/uploads/2025/05/banner-home-3.png',
+        'https://api.nextarea.vn/wp-content/uploads/2025/05/banner-home-4.png',
+        'https://api.nextarea.vn/wp-content/uploads/2025/05/banner-home-5.png',
     ];
     return (
-        <Carousel className="w-full max-w-[1440px] mx-auto relative px-4 md:px-0">
+        <Carousel className="w-full  relative">
             <CarouselContent>
                 {images.map((image, index) => (
                     <CarouselItem key={index}>
