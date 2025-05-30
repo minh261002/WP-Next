@@ -15,16 +15,20 @@ const Brand = () => {
         return <BrandSkeleton />;
     }
     return (
-        <Card>
-            <CardHeader>
-                <CardTitle>
+        <Card className="rounded-md">
+            <CardHeader className="border-b border-gray-200">
+                <CardTitle className="text-xl font-medium">
                     Thương hiệu
                 </CardTitle>
             </CardHeader>
 
             <CardContent>
-                <div className="grid grid-cols-4 gap-4">
-
+                <div className="grid grid-cols-5">
+                    {data?.map((brand) => (
+                        <div key={brand.id} className="flex flex-col items-center justify-center border">
+                            <Image src={brand.image} alt={brand.name} width={100} height={100} className="w-full h-24 object-contain" />
+                        </div>
+                    ))}
                 </div>
             </CardContent>
         </Card>
