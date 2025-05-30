@@ -10,7 +10,7 @@ import { appImages } from '@/constants/appImages'
 
 const Header = () => {
     return (
-        <>
+        <div className='sticky top-0 z-50'>
             <div className='w-full bg-[#fff4fc] hidden md:block py-2'>
                 <div className='w-full max-w-[1440px] mx-auto'>
                     <div className="grid grid-cols-4">
@@ -75,7 +75,7 @@ const Header = () => {
                     </div>
                 </div>
             </div >
-        </>
+        </div>
     )
 }
 
