@@ -17,11 +17,11 @@ const HomeCarousel = () => {
         'https://api.nextarea.vn/wp-content/uploads/2025/05/banner-home-5.png',
     ];
     return (
-        <Carousel className="w-full  relative">
-            <CarouselContent>
+        <Carousel className="w-full h-full relative">
+            <CarouselContent className="h-full">
                 {images.map((image, index) => (
-                    <CarouselItem key={index}>
-                        <Image src={image} alt="banner" width={1440} height={100} className="w-full object-cover" />
+                    <CarouselItem key={index} className="h-full">
+                        <Image src={image} alt="banner" width={1440} height={100} className="w-full object-cover h-full" />
                     </CarouselItem>
                 ))}
             </CarouselContent>

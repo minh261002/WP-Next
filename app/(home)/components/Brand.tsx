@@ -28,7 +28,7 @@ const Brand = () => {
                     {data?.map((brand) => (
                         <div key={brand.id} className="flex flex-col items-center justify-center border">
                             <Link href={`/thuong-hieu/${brand.slug}`} className="w-full h-24">
-                                <Image src={brand.image} alt={brand.name} width={100} height={100} className="w-full h-24 object-contain" />
+                                <Image src={brand.image} alt={brand.name} width={1440} height={100} className="w-full h-24 object-contain" />
                             </Link>
                         </div>
                     ))}
